@@ -1,4 +1,4 @@
-package io.github.splotycode.hecate.tree;
+package io.github.splotycode.hecate.tree.primitive;
 
 /**
  * @author David (_Esel)
