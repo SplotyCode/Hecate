@@ -13,4 +13,8 @@ public class HPrimitive<W> implements HType {
     public HPrimitive(HPrimitiveType type) {
         this.type = type;
     }
+
+    public Unknown<W> getValue() {
+        return value;
+    }
 }

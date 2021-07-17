@@ -1,13 +1,13 @@
 package io.github.splotycode.hecate.flow;
 
-import jdk.internal.org.objectweb.asm.tree.*;
+import org.objectweb.asm.tree.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static jdk.internal.org.objectweb.asm.Opcodes.*;
+import static org.objectweb.asm.Opcodes.*;
 
 /**
  * @author David (_Esel)

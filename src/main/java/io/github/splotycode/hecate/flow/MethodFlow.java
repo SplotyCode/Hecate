@@ -1,6 +1,6 @@
 package io.github.splotycode.hecate.flow;
 
-import jdk.internal.org.objectweb.asm.tree.AbstractInsnNode;
+import org.objectweb.asm.tree.AbstractInsnNode;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,7 +10,7 @@ import java.util.List;
  * @author David (_Esel)
  */
 public class MethodFlow {
-    private static List<Collection<BlockPart>> buildFlowHierarchy(Blocks blocks, AbstractInsnNode instruction) {
+    public static List<Collection<BlockPart>> buildFlowHierarchy(Blocks blocks, AbstractInsnNode instruction) {
         List<Collection<BlockPart>> routes = new ArrayList<>();
         Block block = blocks.block(instruction);
         List<BlockPart> stack = new ArrayList<>();
