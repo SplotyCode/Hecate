@@ -14,6 +14,14 @@ public class HPrimitive<W> implements HType {
         this.type = type;
     }
 
+    @Override
+    public String toString() {
+        return "HPrimitive{" +
+                "type=" + type +
+                ", value=" + value +
+                '}';
+    }
+
     public Unknown<W> getValue() {
         return value;
     }

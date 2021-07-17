@@ -15,6 +15,13 @@ public interface UnknownRule<T> {
             }
 
             @Override
+            public String toString() {
+                return  "definitely{" +
+                        "value=" + value +
+                        '}';
+            }
+
+            @Override
             public UnknownRule<T> transform(Function<T, T> function) {
                 return definitely(function.apply(value));
             }

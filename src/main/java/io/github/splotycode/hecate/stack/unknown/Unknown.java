@@ -18,6 +18,13 @@ public class Unknown<T> {
         return transformed;
     }
 
+    @Override
+    public String toString() {
+        return "Unknown{" +
+                "rules=" + rules +
+                '}';
+    }
+
     public void addRule(UnknownRule<T> rule) {
         rules.add(rule);
     }

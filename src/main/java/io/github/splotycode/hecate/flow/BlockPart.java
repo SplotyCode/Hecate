@@ -16,6 +16,10 @@ public class BlockPart {
         this.instructions = instructions;
     }
 
+    public Collection<Instruction> getInstructions() {
+        return instructions;
+    }
+
     @Override
     public String toString() {
         return "BlockPart{" +

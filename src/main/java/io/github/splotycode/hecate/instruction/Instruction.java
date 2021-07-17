@@ -13,5 +13,9 @@ public abstract class Instruction {
         this.inputElements = inputElements;
     }
 
+    public int getInputElements() {
+        return inputElements;
+    }
+
     public abstract HType[] outputElements(StackContext context, HType... inputs);
 }
