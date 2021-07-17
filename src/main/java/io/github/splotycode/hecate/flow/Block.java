@@ -12,7 +12,7 @@ import java.util.*;
  */
 public class Block {
     LabelNode label;
-    List<Block> input = new ArrayList<>();
+    List<Connection> input = new ArrayList<>();
     AbstractInsnNode endNode;
     List<AbstractInsnNode> nodes = new ArrayList<>();
 

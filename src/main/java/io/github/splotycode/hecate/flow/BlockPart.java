@@ -8,11 +8,11 @@ import java.util.Collection;
  * @author David (_Esel)
  */
 public class BlockPart {
-    private final Block block;
+    private final Connection connection;
     private final Collection<Instruction> instructions;
 
-    public BlockPart(Block block, Collection<Instruction> instructions) {
-        this.block = block;
+    public BlockPart(Connection connection, Collection<Instruction> instructions) {
+        this.connection = connection;
         this.instructions = instructions;
     }
 

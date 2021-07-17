@@ -14,7 +14,7 @@ public class MethodFlow {
         List<Collection<BlockPart>> routes = new ArrayList<>();
         Block block = blocks.block(instruction);
         List<BlockPart> stack = new ArrayList<>();
-        stack.add(new BlockPart(block, block.instructionsAbove(instruction)));
+        stack.add(new BlockPart(new Connection(block, Connection.Type.ENTRY), block.instructionsAbove(instruction)));
         collectRoutes(routes, block, stack);
         return routes;
     }
@@ -23,11 +23,12 @@ public class MethodFlow {
         if (block.input.isEmpty()) {
             routes.add(stack);
         }
-        for (Block input : block.input) {
+        for (Connection input : block.input) {
+            Block target = input.getTarget();
             List<BlockPart> copy = new ArrayList<>();
-            copy.add(new BlockPart(input, input.instructions()));
+            copy.add(new BlockPart(input, target.instructions()));
             copy.addAll(stack);
-            collectRoutes(routes, input, copy);
+            collectRoutes(routes, target, copy);
         }
     }
 }
