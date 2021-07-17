@@ -24,8 +24,9 @@ public class MethodFlow {
             routes.add(stack);
         }
         for (Block input : block.input) {
-            List<BlockPart> copy = new ArrayList<>(stack);
+            List<BlockPart> copy = new ArrayList<>();
             copy.add(new BlockPart(input, input.instructions()));
+            copy.addAll(stack);
             collectRoutes(routes, input, copy);
         }
     }
