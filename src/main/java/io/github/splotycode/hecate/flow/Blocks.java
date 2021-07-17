@@ -99,11 +99,12 @@ public class Blocks {
                 continue;
             }
             ensureBlock();
+            nodeToBlock.put(ain, currentBlock);
             if (ain instanceof LabelNode) {
                 currentBlock.label = (LabelNode) ain;
+                continue;
             }
             currentBlock.nodes.add(ain);
-            nodeToBlock.put(ain, currentBlock);
             int op = ain.getOpcode();
             if (op >= IRETURN && op <= RETURN || ain instanceof JumpInsnNode || op == LOOKUPSWITCH || op == TABLESWITCH) {
                 endBlock(ain);
