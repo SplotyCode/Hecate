@@ -15,4 +15,11 @@ public class BlockPart {
         this.block = block;
         this.instructions = instructions;
     }
+
+    @Override
+    public String toString() {
+        return "BlockPart{" +
+                "instructions=" + instructions +
+                '}';
+    }
 }

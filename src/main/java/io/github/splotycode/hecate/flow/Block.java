@@ -2,8 +2,8 @@ package io.github.splotycode.hecate.flow;
 
 import io.github.splotycode.hecate.instruction.Instruction;
 import io.github.splotycode.hecate.instruction.Instructions;
-import jdk.internal.org.objectweb.asm.tree.AbstractInsnNode;
-import jdk.internal.org.objectweb.asm.tree.LabelNode;
+import org.objectweb.asm.tree.AbstractInsnNode;
+import org.objectweb.asm.tree.LabelNode;
 
 import java.util.*;
 
@@ -22,6 +22,13 @@ public class Block {
             instructions.add(Instructions.create(node));
         }
         return instructions;
+    }
+
+    @Override
+    public String toString() {
+        return "Block{" +
+                "nodes=" + instructions() +
+                '}';
     }
 
     public List<Instruction> instructionsAbove(AbstractInsnNode above) {
