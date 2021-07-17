@@ -12,6 +12,10 @@ public class StackContext {
         locales = new HType[localSize];
     }
 
+    public void local(int index, HType element) {
+        locales[index] = element;
+    }
+
     public HType local(int index) {
         return locales[index];
     }
