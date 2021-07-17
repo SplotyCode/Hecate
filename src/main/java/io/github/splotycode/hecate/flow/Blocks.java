@@ -95,6 +95,9 @@ public class Blocks {
 
     private void collectBlocks() {
         for (AbstractInsnNode ain : nodes) {
+            if (ain instanceof LineNumberNode) {
+                continue;
+            }
             ensureBlock();
             if (ain instanceof LabelNode) {
                 currentBlock.label = (LabelNode) ain;
