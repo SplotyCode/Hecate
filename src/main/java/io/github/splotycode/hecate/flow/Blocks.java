@@ -2,14 +2,12 @@ package io.github.splotycode.hecate.flow;
 
 import jdk.internal.org.objectweb.asm.tree.*;
 
-import java.lang.annotation.Retention;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import static jdk.internal.org.objectweb.asm.Opcodes.*;
-import static jdk.internal.org.objectweb.asm.Opcodes.TABLESWITCH;
 
 /**
  * @author David (_Esel)
@@ -113,5 +111,4 @@ public class Blocks {
             }
         }
     }
-
 }

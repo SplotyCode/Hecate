@@ -16,12 +16,11 @@ public class Block {
     AbstractInsnNode endNode;
     List<AbstractInsnNode> nodes = new ArrayList<>();
 
-    public List<Instruction> prepend(Collection<Instruction> append) {
+    public List<Instruction> instructions() {
         List<Instruction> instructions = new ArrayList<>();
         for (AbstractInsnNode node : nodes) {
             instructions.add(Instructions.create(node));
         }
-        instructions.addAll(append);
         return instructions;
     }
 
